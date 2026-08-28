@@ -3,270 +3,227 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Hao Nie — Ph.D. student in Cybersecurity at Huazhong University of Science and Technology. Research in searchable encryption, private information retrieval, and encrypted search security." />
+  <meta name="description" content="Hao Nie — Ph.D. student in Cybersecurity at Huazhong University of Science and Technology. Research in searchable encryption, private information retrieval, leakage analysis, and secure retrieval." />
   <meta name="author" content="Hao Nie" />
-  <meta name="theme-color" content="#0d2a3f" />
-  <title>Hao Nie | Cybersecurity Researcher</title>
+  <meta name="theme-color" content="#ffffff" />
+  <title>Hao Nie</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Hao Nie home">
-        <span class="brand-mark">HN</span>
-        <span>Hao Nie</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+  <header class="topbar" id="top">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#top">Hao Nie</a>
+      <nav class="topnav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#education">Education</a>
-        <a href="#honors">Honors</a>
-        <a href="#contact">Contact</a>
+        <a href="#awards">Awards</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero section-pad">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Cybersecurity · Privacy-Preserving Systems</p>
-          <h1>Hao Nie</h1>
-          <p class="hero-role">Ph.D. Student in Cybersecurity at Huazhong University of Science and Technology</p>
-          <p class="hero-text">
-            I study the security and privacy of encrypted search systems, with a focus on
-            <strong>searchable encryption</strong>, <strong>private information retrieval</strong>,
-            leakage analysis, and practical defenses. I am also interested in extending these ideas
-            to secure vector retrieval for AI-driven applications.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-            <a class="button ghost" href="mailto:nie@hust.edu.cn">Email me</a>
-          </div>
-          <div class="hero-meta" aria-label="Research profile summary">
-            <span>📍 Wuhan, China</span>
-            <span>🎓 HUST</span>
-            <span>🔐 Encrypted Search</span>
-          </div>
-        </div>
+  <main id="main" class="page-shell">
+    <section class="profile-block" aria-labelledby="page-title">
+      <div class="profile-copy">
+        <p class="overline">Cybersecurity · Privacy-Preserving Retrieval</p>
+        <h1 id="page-title">Hao Nie</h1>
+        <p class="headline">Ph.D. Student in Cybersecurity at Huazhong University of Science and Technology</p>
+        <p class="intro">
+          I work on the security and privacy of encrypted retrieval systems, especially
+          <strong>searchable encryption</strong>, <strong>private information retrieval</strong>,
+          leakage analysis, and practical defenses. I am also interested in secure vector retrieval
+          for AI-driven applications.
+        </p>
 
-        <aside class="portrait-card reveal" aria-label="Portrait of Hao Nie">
-          <img src="assets/profile.jpg" alt="Portrait of Hao Nie" width="720" height="900" />
-          <div class="portrait-caption">
-            <strong>Hao Nie</strong>
-            <span>Ph.D. Student · Cybersecurity</span>
-          </div>
-        </aside>
+        <div class="quick-links" aria-label="Profile links">
+          <a href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+          <a href="mailto:nie@hust.edu.cn">Email</a>
+          <span>Wuhan, China</span>
+        </div>
+      </div>
+
+      <figure class="profile-photo">
+        <img src="assets/profile.jpg" alt="Portrait of Hao Nie" width="560" height="700" />
+      </figure>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="doc-section" id="about">
+      <div class="section-title-row">
+        <span class="section-icon" aria-hidden="true">👋</span>
+        <h2>About me</h2>
+      </div>
+      <div class="section-body prose">
+        <p>
+          I am a Ph.D. student in Cybersecurity at Huazhong University of Science and Technology (HUST).
+          My research focuses on understanding how information leakage affects encrypted retrieval systems
+          in realistic settings and on designing efficient mechanisms that reduce or eliminate such leakage.
+        </p>
+        <p>
+          My recent work studies leakage-abuse attacks against searchable symmetric encryption (SSE) and
+          dynamic SSE (DSSE), including query-recovery attacks under intermittent observations. Beyond attacks,
+          I am interested in practical, low-overhead protections for encrypted search and privacy-preserving retrieval.
+        </p>
       </div>
     </section>
 
-    <section class="section section-alt" id="about">
-      <div class="container two-col">
+    <section class="doc-section" id="research">
+      <div class="section-title-row">
+        <span class="section-icon" aria-hidden="true">🔐</span>
+        <h2>Research interests</h2>
+      </div>
+      <div class="interest-grid">
+        <div class="interest-card">
+          <h3>Searchable Encryption</h3>
+          <p>Security analysis and design of practical searchable symmetric encryption.</p>
+        </div>
+        <div class="interest-card">
+          <h3>Leakage-Abuse Attacks</h3>
+          <p>Query recovery, leakage correlation, and realistic attack models for SSE and DSSE.</p>
+        </div>
+        <div class="interest-card">
+          <h3>Private Information Retrieval</h3>
+          <p>Privacy-preserving retrieval with balanced computation and communication overhead.</p>
+        </div>
+        <div class="interest-card">
+          <h3>Secure Vector Retrieval</h3>
+          <p>Encrypted and privacy-preserving retrieval for AI-driven vector search.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section" id="publications">
+      <div class="section-title-row split-title">
         <div>
-          <p class="section-kicker">About</p>
-          <h2>Security for practical encrypted retrieval</h2>
+          <span class="section-icon" aria-hidden="true">📚</span>
+          <h2>Selected publications</h2>
         </div>
-        <div class="prose reveal">
-          <p>
-            I am a Ph.D. student in Cybersecurity at Huazhong University of Science and Technology (HUST).
-            My research focuses on understanding how information leakage affects encrypted retrieval systems
-            in realistic settings and on designing efficient mechanisms that reduce or eliminate such leakage.
-          </p>
-          <p>
-            My recent work studies leakage-abuse attacks against searchable symmetric encryption (SSE) and
-            dynamic SSE (DSSE), including query-recovery attacks under intermittent observations. Beyond attacks,
-            I am interested in practical, low-overhead protections for encrypted search and privacy-preserving retrieval.
-          </p>
+        <a class="subtle-link" href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&hl=en" target="_blank" rel="noreferrer">Full list on Google Scholar ↗</a>
+      </div>
+
+      <div class="publication-list">
+        <article class="publication-item">
+          <div class="pub-meta">
+            <span class="venue-pill">ACM CCS 2025</span>
+            <span class="year">2025</span>
+          </div>
+          <h3>Peekaboo, I See Your Queries: Passive Attacks Against DSSE Via Intermittent Observations</h3>
+          <p class="authors"><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Wei Chen, Laurence T. Yang, Mauro Conti, Kaitai Liang</p>
+          <p class="description">Passive attacks against dynamic searchable symmetric encryption under intermittent observations.</p>
+          <div class="pub-actions">
+            <a href="https://doi.org/10.1145/3719027.3765075" target="_blank" rel="noreferrer">DOI ↗</a>
+            <a href="https://arxiv.org/abs/2509.03806" target="_blank" rel="noreferrer">arXiv ↗</a>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <div class="pub-meta">
+            <span class="venue-pill">USENIX Security 2024</span>
+            <span class="year">2024</span>
+          </div>
+          <h3>Query Recovery from Easy to Hard: Jigsaw Attack against SSE</h3>
+          <p class="authors"><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Xianglong Zhang, Laurence T. Yang, Kaitai Liang</p>
+          <p class="description">A query-recovery attack that identifies distinctive queries first and then recovers harder queries through leakage correlations.</p>
+          <div class="pub-actions">
+            <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/nie" target="_blank" rel="noreferrer">USENIX ↗</a>
+            <a href="https://arxiv.org/abs/2403.01155" target="_blank" rel="noreferrer">arXiv ↗</a>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <div class="pub-meta">
+            <span class="venue-pill">IEEE GLOBECOM 2022</span>
+            <span class="year">2022</span>
+          </div>
+          <h3>A Real-Time Scalable Video Distribution Strategy Based on Dynamic Coalition and D2D Broadcast</h3>
+          <p class="authors">Chenyan Liu, Wei Wang, Rui Dai, <strong>Hao Nie</strong>, Peng Xu</p>
+          <p class="description">A dynamic coalition strategy for real-time scalable video distribution using device-to-device broadcasting.</p>
+          <div class="pub-actions">
+            <a href="https://doi.org/10.1109/GLOBECOM48099.2022.10001625" target="_blank" rel="noreferrer">DOI ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="doc-section" id="education">
+      <div class="section-title-row">
+        <span class="section-icon" aria-hidden="true">🎓</span>
+        <h2>Education</h2>
+      </div>
+      <div class="timeline-list">
+        <article class="timeline-row">
+          <div class="timeline-date">2024 — Present</div>
+          <div>
+            <h3>Ph.D. in Cybersecurity</h3>
+            <p>Huazhong University of Science and Technology</p>
+            <small>Expected graduation: June 2028</small>
+          </div>
+        </article>
+        <article class="timeline-row">
+          <div class="timeline-date">2021 — 2024</div>
+          <div>
+            <h3>M.S. in Computer Applied Technology</h3>
+            <p>Huazhong University of Science and Technology</p>
+          </div>
+        </article>
+        <article class="timeline-row">
+          <div class="timeline-date">2017 — 2021</div>
+          <div>
+            <h3>B.S. in Computer Science and Technology</h3>
+            <p>Huazhong University of Science and Technology · ACM Class</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="doc-section" id="awards">
+      <div class="section-title-row">
+        <span class="section-icon" aria-hidden="true">🏅</span>
+        <h2>Honors & research experience</h2>
+      </div>
+      <div class="callout-list">
+        <div class="callout">
+          <span class="callout-mark">🏆</span>
+          <div><strong>National Scholarship</strong><p>Recipient during graduate study.</p></div>
+        </div>
+        <div class="callout">
+          <span class="callout-mark">🥇</span>
+          <div><strong>First Prize, “Challenge Cup” Special Track</strong><p>17th National College Students’ Extracurricular Academic Science and Technology Works Competition, 2021.</p></div>
+        </div>
+        <div class="callout">
+          <span class="callout-mark">📜</span>
+          <div><strong>Granted Patent</strong><p>A multi-relay coalition partitioning and adjustment method and multi-relay transmission system.</p></div>
+        </div>
+        <div class="callout">
+          <span class="callout-mark">🧪</span>
+          <div><strong>National Research Projects</strong><p>Participated in National Key R&amp;D Program and NSFC projects related to data privacy and secure searchable encryption.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="research">
-      <div class="container">
-        <p class="section-kicker">Research</p>
-        <div class="section-heading-row">
-          <h2>Research interests</h2>
-          <p>Bridging rigorous security analysis with systems that remain efficient enough to deploy.</p>
-        </div>
-        <div class="card-grid research-grid">
-          <article class="card reveal">
-            <span class="card-index">01</span>
-            <h3>Searchable Encryption</h3>
-            <p>Security analysis and design of searchable symmetric encryption for practical encrypted databases.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card-index">02</span>
-            <h3>Leakage-Abuse Attacks</h3>
-            <p>Query recovery, leakage correlation, and realistic attacker models for SSE and dynamic SSE.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card-index">03</span>
-            <h3>Private Information Retrieval</h3>
-            <p>Privacy-preserving retrieval mechanisms that balance security, communication, and computation costs.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card-index">04</span>
-            <h3>Secure Vector Retrieval</h3>
-            <p>Exploring secure retrieval techniques for AI-driven vector search and similarity-based applications.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="publications">
-      <div class="container">
-        <p class="section-kicker light">Selected publications</p>
-        <div class="section-heading-row light-row">
-          <h2>Recent work</h2>
-          <a class="text-link light-link" href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&hl=en" target="_blank" rel="noreferrer">View full profile ↗</a>
-        </div>
-
-        <div class="pub-list">
-          <article class="publication reveal">
-            <div class="pub-year">2025</div>
-            <div class="pub-body">
-              <div class="pub-venue">ACM CCS 2025</div>
-              <h3>Peekaboo, I See Your Queries: Passive Attacks Against DSSE Via Intermittent Observations</h3>
-              <p class="authors"><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Wei Chen, Laurence T. Yang, Mauro Conti, Kaitai Liang</p>
-              <p class="pub-note">A passive attack framework for dynamic searchable symmetric encryption under intermittent, rather than continuous, leakage observations.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1145/3719027.3765075" target="_blank" rel="noreferrer">DOI ↗</a>
-                <a href="https://arxiv.org/abs/2509.03806" target="_blank" rel="noreferrer">arXiv ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="publication reveal">
-            <div class="pub-year">2024</div>
-            <div class="pub-body">
-              <div class="pub-venue">USENIX Security 2024</div>
-              <h3>Query Recovery from Easy to Hard: Jigsaw Attack against SSE</h3>
-              <p class="authors"><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Xianglong Zhang, Laurence T. Yang, Kaitai Liang</p>
-              <p class="pub-note">A query-recovery attack that first identifies distinctive queries and then uses leakage correlations to recover harder queries.</p>
-              <div class="pub-links">
-                <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/nie" target="_blank" rel="noreferrer">USENIX ↗</a>
-                <a href="https://arxiv.org/abs/2403.01155" target="_blank" rel="noreferrer">arXiv ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="publication reveal">
-            <div class="pub-year">2022</div>
-            <div class="pub-body">
-              <div class="pub-venue">IEEE GLOBECOM 2022</div>
-              <h3>A Real-Time Scalable Video Distribution Strategy Based on Dynamic Coalition and D2D Broadcast</h3>
-              <p class="authors">Chenyan Liu, Wei Wang, Rui Dai, <strong>Hao Nie</strong>, Peng Xu</p>
-              <p class="pub-note">A dynamic coalition strategy for real-time scalable video distribution using device-to-device broadcasting.</p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1109/GLOBECOM48099.2022.10001625" target="_blank" rel="noreferrer">DOI ↗</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="education">
-      <div class="container two-col education-layout">
+    <section class="doc-section contact-section" id="contact">
+      <div class="contact-card">
         <div>
-          <p class="section-kicker">Education</p>
-          <h2>Huazhong University of Science and Technology</h2>
-          <p class="muted">Wuhan, China</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2024 — Present</div>
-            <div>
-              <h3>Ph.D. in Cybersecurity</h3>
-              <p>Huazhong University of Science and Technology</p>
-              <span>Expected graduation: June 2028</span>
-            </div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2021 — 2024</div>
-            <div>
-              <h3>M.S. in Computer Applied Technology</h3>
-              <p>Huazhong University of Science and Technology</p>
-            </div>
-          </article>
-          <article class="timeline-item reveal">
-            <div class="timeline-date">2017 — 2021</div>
-            <div>
-              <h3>B.S. in Computer Science and Technology</h3>
-              <p>Huazhong University of Science and Technology</p>
-              <span>ACM Class</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="honors">
-      <div class="container">
-        <p class="section-kicker">Honors & experience</p>
-        <div class="section-heading-row">
-          <h2>Highlights</h2>
-          <p>Selected academic honors, research experience, and intellectual property.</p>
-        </div>
-        <div class="highlight-grid">
-          <article class="highlight reveal">
-            <span>🏆</span>
-            <div>
-              <h3>National Scholarship</h3>
-              <p>Recipient during graduate study.</p>
-            </div>
-          </article>
-          <article class="highlight reveal">
-            <span>🥇</span>
-            <div>
-              <h3>First Prize, “Challenge Cup” Special Track</h3>
-              <p>17th National College Students’ Extracurricular Academic Science and Technology Works Competition, 2021.</p>
-            </div>
-          </article>
-          <article class="highlight reveal">
-            <span>📜</span>
-            <div>
-              <h3>Granted Patent</h3>
-              <p>A multi-relay coalition partitioning and adjustment method and multi-relay transmission system.</p>
-            </div>
-          </article>
-          <article class="highlight reveal">
-            <span>🧪</span>
-            <div>
-              <h3>National Research Projects</h3>
-              <p>Participated in National Key R&amp;D Program and NSFC projects related to data privacy and secure searchable encryption.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container contact-box reveal">
-        <div>
-          <p class="section-kicker">Contact</p>
+          <p class="contact-kicker">Contact</p>
           <h2>Interested in encrypted search and privacy-preserving retrieval?</h2>
           <p>I am happy to discuss research ideas, collaborations, and related academic work.</p>
         </div>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:nie@hust.edu.cn">nie@hust.edu.cn</a>
-          <a class="button ghost" href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+        <div class="contact-links">
+          <a class="primary-link" href="mailto:nie@hust.edu.cn">nie@hust.edu.cn</a>
+          <a href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar ↗</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Hao Nie. Built for GitHub Pages.</p>
-      <a href="#top">Back to top ↑</a>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Hao Nie</span>
+      <span>Built for GitHub Pages</span>
     </div>
   </footer>
 
