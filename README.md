@@ -1,20 +1,26 @@
-# Hao Nie — Academic Homepage
+# Hao Nie — Research Profile Homepage
 
-A lightweight, Notion-inspired academic homepage designed for GitHub Pages.
+A static, Notion-inspired academic homepage built with plain HTML, CSS, and JavaScript.
 
 ## Deploy to GitHub Pages
 
 1. Create a repository named `<your-github-username>.github.io`.
 2. Upload all files in this folder to the repository root.
-3. Open **Settings → Pages**.
-4. Choose **Deploy from a branch**.
-5. Select `main` and `/(root)`, then save.
-6. Visit `https://<your-github-username>.github.io` after GitHub finishes deployment.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select branch `main` and folder `/(root)`.
+6. Save, then wait for deployment.
+7. Visit `https://<your-github-username>.github.io`.
 
-## Edit content
+## Files
 
-- Main text and links: `index.html`
-- Visual design: `styles.css`
-- Profile photo: `assets/profile.jpg`
+- `index.html` — page structure and content
+- `styles.css` — page styling
+- `script.js` — active section rail and footer year
+- `assets/profile.jpg` — profile photo
+- `assets/favicon.svg` — favicon
 
-The site uses only static HTML/CSS/JS and has no build step.
+## Notes
+
+- The site has no build step.
+- You can edit the page title, sections, links, and publication list directly in `index.html`.
