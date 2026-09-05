@@ -18,7 +18,8 @@ A minimal academic homepage and print-friendly English CV, built with plain HTML
 - `cv.html` — print-friendly curriculum vitae
 - `styles.css` — responsive homepage, dark theme, and print styles
 - `script.js` — theme preference, print action, and footer year
-- `assets/hao-nie-life.jpg` — lifestyle portrait used on the homepage and CV
+- `assets/hao-nie-life.jpg` — lifestyle portrait used on the homepage
+- `assets/hao-nie-cv.jpg` — formal portrait used on the CV
 - `assets/favicon.svg` — favicon
 
 ## Notes
