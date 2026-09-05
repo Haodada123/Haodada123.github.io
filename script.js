@@ -1,32 +1,24 @@
+const root = document.documentElement;
+const themeButton = document.querySelector('.theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const setTheme = (theme) => {
+  root.dataset.theme = theme;
+  localStorage.setItem('theme', theme);
+  if (themeButton) {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    themeButton.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
+  }
+};
+
+setTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+themeButton?.addEventListener('click', () => {
+  setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+});
+
 const yearNode = document.querySelector('#year');
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 
-const railLinks = Array.from(document.querySelectorAll('.section-rail a'));
-const sectionIds = railLinks.map(link => link.dataset.section);
-const observedSections = sectionIds
-  .map(id => document.getElementById(id))
-  .filter(Boolean);
-
-const setActiveRail = (id) => {
-  railLinks.forEach(link => {
-    link.classList.toggle('active', link.dataset.section === id);
-  });
-};
-
-if (observedSections.length && 'IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter(entry => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-    if (visible[0]) {
-      setActiveRail(visible[0].target.id);
-    }
-  }, {
-    threshold: [0.2, 0.45, 0.7],
-    rootMargin: '-10% 0px -45% 0px'
-  });
-
-  observedSections.forEach(section => observer.observe(section));
-  setActiveRail(observedSections[0].id);
-}
+document.querySelector('.print-button')?.addEventListener('click', () => window.print());

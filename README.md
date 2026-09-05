@@ -1,6 +1,6 @@
-# Hao Nie — Research Profile Homepage
+# Hao Nie — Academic Homepage
 
-A static, Notion-inspired academic homepage built with plain HTML, CSS, and JavaScript.
+A minimal academic homepage and print-friendly English CV, built with plain HTML, CSS, and JavaScript.
 
 ## Deploy to GitHub Pages
 
@@ -14,13 +14,15 @@ A static, Notion-inspired academic homepage built with plain HTML, CSS, and Java
 
 ## Files
 
-- `index.html` — page structure and content
-- `styles.css` — page styling
-- `script.js` — active section rail and footer year
-- `assets/profile.jpg` — profile photo
+- `index.html` — academic homepage
+- `cv.html` — print-friendly curriculum vitae
+- `styles.css` — responsive homepage, dark theme, and print styles
+- `script.js` — theme preference, print action, and footer year
+- `assets/hao-nie-life.jpg` — lifestyle portrait used on the homepage and CV
 - `assets/favicon.svg` — favicon
 
 ## Notes
 
 - The site has no build step.
-- You can edit the page title, sections, links, and publication list directly in `index.html`.
+- You can edit homepage content in `index.html` and CV content in `cv.html`.
+- Open `cv.html` and select **Print / Save as PDF** to export an A4 PDF.
