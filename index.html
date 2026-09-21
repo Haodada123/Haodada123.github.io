@@ -7,19 +7,16 @@
         <meta name="author" content="Hao Nie"/> 
         <meta name="theme-color" content="#ffffff"/> 
         <title>Hao Nie</title>         
-        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/> 
-        <link rel="stylesheet" href="styles.css?v=20260905-2"/> 
+        <link rel="icon" href="assets/favicon.svg?v=20260921-1" type="image/svg+xml"/>
+        <link rel="stylesheet" href="styles.css?v=20260921-4"/>
     </head>     
     <body> 
         <a class="skip-link" href="#about">Skip to content</a> 
         <header class="site-header"> 
             <div class="header-inner"> 
                 <a class="site-name" href="index.html" aria-label="Hao Nie — homepage">Hao Nie</a> 
-                <nav class="site-nav" aria-label="Primary navigation"> 
-                    <a href="#about">about</a> 
-                    <a href="#research">research</a> 
-                    <a href="#publications">publications</a> 
-                    <a href="cv.html">cv</a> 
+                <nav class="site-nav" aria-label="Primary navigation">                                                                
+                    <a href="cv.html">CV</a> 
                     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme"> 
                         <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"> 
                             <circle cx="12" cy="12" r="4"></circle>                             
@@ -37,14 +34,17 @@
                 <figure class="profile-photo"> 
                     <img src="assets/hao-nie-life.jpg" alt="Hao Nie by a lotus pond" width="1706" height="1279"/> 
                 </figure>                 
-                <p class="profile-role">Ph.D. Student at the School of Cyber Science and Engineering, HUST</p> 
+                <div class="profile-summary">
+                    <p class="profile-name">Hao Nie</p>
+                    <p class="profile-role">Ph.D. Student<br/>School of Cyber Science and Engineering<br/>Huazhong University of Science and Technology (HUST)</p>
+                </div>
                 <ul class="profile-links" aria-label="Contact and profile links"> 
                     <li> 
                         <svg aria-hidden="true" viewBox="0 0 24 24">
                             <path d="M3 5.5h18v13H3z"></path>
                             <path d="m4 7 8 6 8-6"></path>
                         </svg>                         
-                        <a href="mailto:nie@hust.edu.cn">nie@hust.edu.cn</a> 
+                        <a href="mailto:nie@hust.edu.cn">nie@hust.edu.cn</a>
                     </li>                     
                     <li> 
                         <svg aria-hidden="true" viewBox="0 0 24 24">
@@ -53,60 +53,68 @@
                         </svg>                         
                         <a href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a> 
                     </li>                     
-                </ul>                 
-            </aside>             
+                </ul>
+            </aside>
             <div class="main-column"> 
                 <section class="intro" aria-labelledby="intro-heading"> 
                     <h1 id="intro-heading" class="visually-hidden">About Hao Nie</h1> 
                     <p> 
-          I am a Ph.D. student at the <a href="https://english.hust.edu.cn/dw.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1016" target="_blank" rel="noreferrer">School of Cyber Science and Engineering</a>, <a href="https://english.hust.edu.cn/" target="_blank" rel="noreferrer">Huazhong University of Science and Technology (HUST)</a>.
-          My research lies at the intersection of systems security and applied cryptography, with a focus on <strong>searchable encryption</strong>, <strong>private information retrieval</strong>, and <strong>leakage analysis</strong>. </p> 
-                    <p> 
-          I study the privacy risks created by access-pattern and query leakage in encrypted retrieval systems.
-          My goal is to understand these risks under realistic observation models and to build retrieval mechanisms
-          that remain both secure and practical. </p> 
+I am a Ph.D. student at the <a href="https://cse.hust.edu.cn/" target="_blank" rel="noreferrer">School of Cyber Science and Engineering</a>, <a href="https://english.hust.edu.cn/" target="_blank" rel="noreferrer">Huazhong University of Science and Technology (HUST)</a>, advised by Prof. Peng Xu.
+          </p>
+                    <p>My research lies broadly in <strong>security and privacy</strong>, with a focus on the <strong>security and efficiency of encrypted and private data retrieval</strong>. I am particularly interested in <strong>encrypted search, leakage analysis, private information retrieval (PIR), and privacy-preserving search</strong>.</p>
                 </section>                 
                 <section class="content-section" id="research" aria-labelledby="research-heading"> 
                     <h2 id="research-heading">Research</h2> 
-                    <p>I am currently interested in the following topics:</p> 
+                    <p>I am currently working on the following research directions:</p>
                     <ul class="simple-list"> 
                         <li>
-                            <strong>Encrypted search:</strong> practical and privacy-preserving searchable encryption.
+                            <strong>Leakage Analysis and Attacks.</strong> Understanding how observable leakage from encrypted databases can be exploited to recover sensitive queries and data.
                         </li>                         
                         <li>
-                            <strong>Leakage analysis:</strong> query recovery and leakage-abuse attacks against SSE and DSSE.
+                            <strong>Leakage-Resilient Encrypted Search.</strong> Designing practical encrypted databases that mitigate exploitable leakage while retaining efficient search and dynamic updates.
                         </li>                         
                         <li>
-                            <strong>Private retrieval:</strong> secure retrieval for databases, vector search, and emerging AI workloads.
+                            <strong>Private Data Retrieval.</strong> Developing efficient private information retrieval (PIR) and privacy-preserving retrieval protocols for large-scale databases.
                         </li>                         
+                        <li>
+                            <strong>Secure Payments for LPSI in Data Trading.</strong> Investigating secure payment mechanisms as part of an ongoing industry-collaborative innovation project.
+                        </li>
                     </ul>                     
                 </section>                 
                 <section class="content-section" id="publications" aria-labelledby="publications-heading"> 
                     <h2 id="publications-heading">Selected Publications</h2> 
                     <ol class="publication-list"> 
+                        <li>
+                            <p class="paper-title">Aspire: Practical Batch Queries on Dynamic Encrypted Database with Fully Leakage Suppression</p>
+                            <p><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Haoming Yan, Laurence T. Yang, and Kaitai Liang.</p>
+                            <p class="venue">Network and Distributed System Security Symposium (NDSS), 2027.</p>
+                            <p><strong>Accepted.</strong></p>
+                        </li>
                         <li> 
                             <p class="paper-title">Peekaboo, I See Your Queries: Passive Attacks Against DSSE Via Intermittent Observations</p> 
                             <p><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Wei Chen, Laurence T. Yang, Mauro Conti, and Kaitai Liang.</p> 
                             <p class="venue">ACM Conference on Computer and Communications Security (CCS), 2025.</p> 
-                            <p class="paper-links">  <a href="https://doi.org/10.1145/3719027.3765075" target="_blank" rel="noreferrer">[DOI]</a>  <a href="https://arxiv.org/abs/2509.03806" target="_blank" rel="noreferrer">[Full Version]</a>  </p> 
+                            <p class="paper-links"> <a href="https://doi.org/10.1145/3719027.3765075" target="_blank" rel="noreferrer">[DOI]</a> <a href="https://arxiv.org/abs/2509.03806" target="_blank" rel="noreferrer">[Full Version]</a></p>
+                            <p class="paper-summary"><em>Leakage-abuse attacks against dynamic searchable encryption under intermittent rather than continuous observations.</em></p>
                         </li>                         
                         <li> 
                             <p class="paper-title">Query Recovery from Easy to Hard: Jigsaw Attack against SSE</p> 
                             <p><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Xianglong Zhang, Laurence T. Yang, and Kaitai Liang.</p> 
                             <p class="venue">33rd USENIX Security Symposium (USENIX Security), 2024.</p> 
-                            <p class="paper-links">  <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/nie" target="_blank" rel="noreferrer">[USENIX]</a>  <a href="https://arxiv.org/abs/2403.01155" target="_blank" rel="noreferrer">[Full Version]</a>  </p> 
+                            <p class="paper-links"> <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/nie" target="_blank" rel="noreferrer">[USENIX]</a> <a href="https://arxiv.org/abs/2403.01155" target="_blank" rel="noreferrer">[Full Version]</a></p>
+                            <p class="paper-summary"><em>Progressively recovers encrypted search queries by exploiting distinguishable leakage patterns.</em></p>
                         </li>                         
                         <li> 
                             <p class="paper-title">Multi-Hop D2D Cluster Formation and Resource Allocation for Scalable Video Multicast</p> 
                             <p><strong>Hao Nie</strong>, Wei Wang, Rui Dai, Chenyan Liu, Zhixing Wang, and Peng Xu.</p> 
                             <p class="venue">IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA), 2024.</p> 
-                            <p class="paper-links">  <a href="https://doi.org/10.1109/ISPA63168.2024.00181" target="_blank" rel="noreferrer">[DOI]</a>  </p> 
+                            <p class="paper-links"> <a href="https://doi.org/10.1109/ISPA63168.2024.00181" target="_blank" rel="noreferrer">[DOI]</a> </p> 
                         </li>                         
                         <li> 
                             <p class="paper-title">A Real-Time Scalable Video Distribution Strategy Based on Dynamic Coalition and D2D Broadcast</p> 
                             <p>Chenyan Liu, Wei Wang, Rui Dai, <strong>Hao Nie</strong>, and Peng Xu.</p> 
                             <p class="venue">IEEE Global Communications Conference (GLOBECOM), 2022.</p> 
-                            <p class="paper-links">  <a href="https://doi.org/10.1109/GLOBECOM48099.2022.10001625" target="_blank" rel="noreferrer">[DOI]</a>  </p> 
+                            <p class="paper-links"> <a href="https://doi.org/10.1109/GLOBECOM48099.2022.10001625" target="_blank" rel="noreferrer">[DOI]</a> </p> 
                         </li>                         
                     </ol>                     
                 </section>                 
@@ -114,21 +122,45 @@
                     <h2 id="news-heading">News</h2> 
                     <ul class="news-list"> 
                         <li>
-                            <time datetime="2025">2025</time>
-                            <span>Our work on passive attacks against DSSE was published at ACM CCS.</span>
+                            <time datetime="2026-09">[Sep. 2026]</time>
+                            <span>Our paper <em>Aspire</em> has been accepted to NDSS 2027.</span>
+                        </li>
+                        <li>
+                            <time datetime="2025-10">[Oct. 2025]</time>
+                            <span>Our paper <em>Peekaboo</em> appeared at ACM CCS 2025.</span>
                         </li>                         
                         <li>
-                            <time datetime="2024">2024</time>
-                            <span>Our Jigsaw attack paper was published at USENIX Security.</span>
+                            <time datetime="2024-09">[Sep. 2024]</time>
+                            <span>I started my Ph.D. study in Cybersecurity at HUST.</span>
                         </li>                         
                         <li>
-                            <time datetime="2024">2024</time>
-                            <span>I began my Ph.D. study in Cybersecurity at HUST.</span>
+                            <time datetime="2024-08">[Aug. 2024]</time>
+                            <span>Our paper <em>Jigsaw</em> appeared at USENIX Security 2024.</span>
                         </li>                         
                     </ul>                     
                 </section>                 
+                <section class="content-section" id="honors-awards" aria-labelledby="honors-awards-heading">
+                    <h2 id="honors-awards-heading">Honors &amp; Awards</h2>
+                    <ul class="simple-list">
+                        <li><strong>National Scholarship for Graduate Students</strong>, <time datetime="2025">2025</time></li>
+                        <li><strong>First Prize</strong>, 17th &ldquo;Challenge Cup&rdquo; National College Students' Extracurricular Academic Science and Technology Contest, <time datetime="2021">2021</time></li>
+                    </ul>
+                </section>
+                <section class="content-section" id="academic-service" aria-labelledby="academic-service-heading">
+                    <h2 id="academic-service-heading">Academic Service</h2>
+                    <h3 class="service-heading">Assisted with Peer Review</h3>
+                    <ul class="simple-list">
+                        <li>USENIX Security Symposium</li>
+                        <li>ACM CCS</li>
+                        <li>ESORICS</li>
+                    </ul>
+                    <h3 class="service-heading">Session Chair</h3>
+                    <ul class="simple-list">
+                        <li>IEEE ISPA, <time datetime="2024">2024</time></li>
+                    </ul>
+                </section>
             </div>             
-        </main>                  
+        </main>         
         <script src="script.js?v=20260905-2"></script>         
     </body>     
 </html>

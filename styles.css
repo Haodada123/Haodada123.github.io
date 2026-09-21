@@ -169,7 +169,16 @@ a { -webkit-tap-highlight-color: transparent; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 67% center;
+  object-position: 78% center;
+  transform: scale(1.75);
+  transform-origin: 65% 70%;
+}
+
+.profile-name {
+  margin: 14px 0 4px;
+  color: var(--heading);
+  font-size: 21px;
+  font-weight: 700;
 }
 
 .profile-role {
@@ -229,6 +238,15 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .content-section > p { margin: 0 0 12px; }
 
+.service-heading {
+  margin: 20px 0 8px;
+  color: var(--heading);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.content-section h2 + .service-heading { margin-top: 0; }
+
 .simple-list {
   margin: 0;
   padding-left: 25px;
@@ -259,6 +277,8 @@ a { -webkit-tap-highlight-color: transparent; }
   font-size: 14px;
 }
 
+.paper-summary { font-size: 14px; }
+
 .news-list {
   margin: 0;
   padding: 0;
@@ -269,11 +289,12 @@ a { -webkit-tap-highlight-color: transparent; }
 
 .news-list li {
   display: grid;
-  grid-template-columns: 58px 1fr;
+  grid-template-columns: 94px minmax(0, 1fr);
   gap: 13px;
 }
 
 .news-list time {
+  white-space: nowrap;
   color: var(--heading);
   font-weight: 600;
 }
@@ -363,6 +384,7 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 .cv-section-content { min-width: 0; }
+.cv-section-content > p:first-child { margin-top: 0; }
 .cv-entry + .cv-entry { margin-top: 16px; }
 
 .cv-entry-head {
@@ -391,6 +413,8 @@ a { -webkit-tap-highlight-color: transparent; }
   margin: 5px 0 0;
   padding-left: 20px;
 }
+
+.cv-experience li + li { margin-top: 5px; }
 
 .cv-actions {
   margin-top: 30px;
@@ -440,6 +464,8 @@ a { -webkit-tap-highlight-color: transparent; }
 
   .profile-photo { grid-row: 1 / 3; }
 
+  .profile-name { margin-top: 0; }
+
   .profile-role {
     margin-top: 0;
     align-self: end;
@@ -483,7 +509,7 @@ a { -webkit-tap-highlight-color: transparent; }
   }
 
   .news-list li {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 90px minmax(0, 1fr);
     gap: 9px;
   }
 
@@ -509,7 +535,8 @@ a { -webkit-tap-highlight-color: transparent; }
 
   @page {
     size: A4;
-    margin: 15mm 16mm;
+    /* Keep browser-generated headers and footers outside the printable area. */
+    margin: 0;
   }
 
   body {
@@ -517,12 +544,16 @@ a { -webkit-tap-highlight-color: transparent; }
     line-height: 1.35;
   }
 
+  .skip-link,
   .cv-page .site-header,
   .cv-actions { display: none; }
 
   .cv-wrap {
     width: 100%;
-    padding: 0;
+    padding: 15mm 16mm;
+    /* Repeat the content inset if the CV spans multiple printed pages. */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   .cv-heading {
@@ -535,7 +566,7 @@ a { -webkit-tap-highlight-color: transparent; }
   .cv-heading h1 { font-size: 22pt; }
 
   .cv-section {
-    margin-top: 5mm;
+    margin-top: 4mm;
     grid-template-columns: 31mm 1fr;
     gap: 6mm;
     break-inside: avoid;
@@ -544,6 +575,10 @@ a { -webkit-tap-highlight-color: transparent; }
   .cv-section h2,
   .cv-entry h3 { font-size: 10pt; }
 
-  .cv-entry + .cv-entry { margin-top: 3.2mm; }
+  .cv-publications,
+  .cv-experience { break-inside: auto; }
+  .cv-entry { break-inside: avoid; }
+
+  .cv-entry + .cv-entry { margin-top: 2.5mm; }
   a { color: inherit; }
 }

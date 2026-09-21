@@ -7,8 +7,8 @@
         <meta name="author" content="Hao Nie"/> 
         <meta name="theme-color" content="#ffffff"/> 
         <title>Curriculum Vitae | Hao Nie</title>         
-        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/> 
-        <link rel="stylesheet" href="styles.css?v=20260905-2"/> 
+        <link rel="icon" href="assets/favicon.svg?v=20260921-1" type="image/svg+xml"/>
+        <link rel="stylesheet" href="styles.css?v=20260921-7"/>
     </head>     
     <body class="cv-page"> 
         <a class="skip-link" href="#cv">Skip to CV</a> 
@@ -16,8 +16,7 @@
             <div class="header-inner"> 
                 <a class="site-name" href="index.html">Hao Nie</a> 
                 <nav class="site-nav" aria-label="CV navigation"> 
-                    <a href="index.html">homepage</a> 
-                    <a href="index.html#publications">publications</a> 
+                    <a href="index.html">Homepage</a>                      
                     <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme"> 
                         <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"> 
                             <circle cx="12" cy="12" r="4"></circle>                             
@@ -34,9 +33,10 @@
             <header class="cv-heading"> 
                 <div> 
                     <h1>Hao Nie</h1> 
-                    <p>Ph.D. Student in Cyber Security</p> 
+                    <p>Ph.D. Student in Cybersecurity</p>
+                    <p>Advisor: Prof. Peng Xu</p>
                     <p>School of Cyber Science and Engineering · Huazhong University of Science and Technology · Wuhan, China</p> 
-                    <p><a href="mailto:nie@hust.edu.cn">nie@hust.edu.cn</a> · <a href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a></p> 
+                    <p><a href="mailto:nie@hust.edu.cn">nie@hust.edu.cn</a> · <a href="https://scholar.google.com/citations?user=cpetpmUAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a></p>
                 </div>                 
                 <figure class="cv-photo"> 
                     <img src="assets/hao-nie-cv.jpg" alt="Portrait of Hao Nie" width="1500" height="2247"/> 
@@ -45,7 +45,7 @@
             <section class="cv-section" aria-labelledby="cv-research"> 
                 <h2 id="cv-research">Research Interests</h2> 
                 <div class="cv-section-content"> 
-                    <p>Searchable encryption, private information retrieval, leakage-abuse attacks, dynamic SSE, encrypted search, and secure retrieval for AI-oriented workloads.</p> 
+                    <p>Security and privacy, with a focus on the security and efficiency of encrypted and private data retrieval, including encrypted search, leakage analysis, private information retrieval (PIR), and privacy-preserving search.</p>
                 </div>                 
             </section>             
             <section class="cv-section" aria-labelledby="cv-education"> 
@@ -53,7 +53,7 @@
                 <div class="cv-section-content"> 
                     <article class="cv-entry"> 
                         <div class="cv-entry-head"> 
-                            <h3>Ph.D. in Cyber Security</h3> 
+                            <h3>Ph.D. in Cybersecurity</h3>
                             <span class="cv-date">2024–Present</span> 
                         </div>                         
                         <p>School of Cyber Science and Engineering · Huazhong University of Science and Technology</p> 
@@ -74,9 +74,52 @@
                     </article>                     
                 </div>                 
             </section>             
-            <section class="cv-section" aria-labelledby="cv-publications"> 
+            <section class="cv-section cv-experience" aria-labelledby="cv-experience">
+                <h2 id="cv-experience">Research Experience</h2>
+                <div class="cv-section-content">
+                    <article class="cv-entry">
+                        <h3>Leakage Analysis and Attacks on Encrypted Search</h3>
+                        <p><em>Jigsaw &mdash; USENIX Security 2024; Peekaboo &mdash; ACM CCS 2025</em></p>
+                        <ul>
+                            <li>Investigated how observable leakage from searchable encryption, including access, volume, search, and file-volume patterns, can be exploited to recover sensitive search queries.</li>
+                            <li>Developed <strong>Jigsaw</strong>, an easy-to-hard query-recovery attack that first identifies distinctive queries using volume and frequency information and then progressively recovers the remaining queries through co-occurrence relationships.</li>
+                            <li>Extended leakage-abuse analysis to dynamic searchable encryption with <strong>Peekaboo</strong>, introducing intermittent-observation attacks that infer search patterns across disconnected observation periods and enable effective query recovery without continuous leakage monitoring.</li>
+                        </ul>
+                    </article>
+                    <article class="cv-entry">
+                        <h3>Leakage-Resilient Encrypted Databases</h3>
+                        <p><em>Aspire &mdash; NDSS 2027, Accepted</em></p>
+                        <ul>
+                            <li>Introduced <strong>restricted zero-leakage</strong>, a practical security notion that eliminates plaintext-dependent semantic leakage while allowing non-semantic operation metadata.</li>
+                            <li>Designed <strong>Aspire</strong>, a dynamic encrypted key-value database that combines probabilistic batch codes, minimal perfect hashing, and oblivious data access to support efficient batch keyword queries and dynamic updates under restricted zero-leakage.</li>
+                            <li>Implemented and evaluated Aspire on databases with up to millions of key-value pairs, achieving an amortized query latency below <strong>1.38 ms</strong> while substantially reducing communication overhead for large batch queries.</li>
+                        </ul>
+                    </article>
+                    <article class="cv-entry">
+                        <h3>Privacy-Preserving Data Trading</h3>
+                        <p><em>Innovation Research Project in Collaboration with Ant Group</em></p>
+                        <ul>
+                            <li>Study efficient cryptographic protocols for privacy-preserving data trading, with a focus on controlled data retrieval and secure data delivery with billing support.</li>
+                        </ul>
+                    </article>
+                    <article class="cv-entry" aria-labelledby="cv-ongoing-research">
+                        <h3 id="cv-ongoing-research">Ongoing Research</h3>
+                        <ul>
+                            <li><strong>Constant-Communication Access-Pattern Hiding.</strong> Explore efficient encrypted retrieval mechanisms that <strong>hide access patterns with constant communication overhead</strong>.</li>
+                            <li><strong>High-Concurrency Private Information Retrieval.</strong> Develop efficient PIR protocols for <strong>multi-user concurrent queries</strong>, focusing on improving scalability under high query concurrency.</li>
+                            <li><strong>Query Recovery with General Knowledge.</strong> Develop leakage-abuse attacks that reduce dependence on large target-related auxiliary datasets by exploiting general knowledge for encrypted query inference.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="cv-section cv-publications" aria-labelledby="cv-publications">
                 <h2 id="cv-publications">Publications</h2> 
                 <div class="cv-section-content"> 
+                    <article class="cv-entry">
+                        <h3>Aspire: Practical Batch Queries on Dynamic Encrypted Database with Fully Leakage Suppression</h3>
+                        <p><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Haoming Yan, Laurence T. Yang, and Kaitai Liang.</p>
+                        <p><em>Network and Distributed System Security Symposium (NDSS), 2027.</em> <strong>Accepted.</strong></p>
+                    </article>
                     <article class="cv-entry"> 
                         <h3>Peekaboo, I See Your Queries: Passive Attacks Against DSSE Via Intermittent Observations</h3> 
                         <p><strong>Hao Nie</strong>, Wei Wang, Peng Xu, Wei Chen, Laurence T. Yang, Mauro Conti, and Kaitai Liang.</p> 
@@ -100,16 +143,42 @@
                 </div>                 
             </section>             
             <section class="cv-section" aria-labelledby="cv-honors"> 
-                <h2 id="cv-honors">Honors</h2> 
+                <h2 id="cv-honors">Honors &amp; Awards</h2>
                 <div class="cv-section-content"> 
                     <article class="cv-entry"> 
                         <div class="cv-entry-head"> 
-                            <h3>National Scholarship</h3> 
+                            <h3>National Scholarship for Graduate Students</h3>
                             <span class="cv-date">2025</span> 
                         </div>                         
                     </article>                     
+                    <article class="cv-entry">
+                        <div class="cv-entry-head">
+                            <h3>First Prize</h3>
+                            <span class="cv-date">2021</span>
+                        </div>
+                        <p>17th &ldquo;Challenge Cup&rdquo; National College Students' Extracurricular Academic Science and Technology Contest</p>
+                    </article>
                 </div>                 
             </section>             
+            <section class="cv-section" aria-labelledby="cv-service">
+                <h2 id="cv-service">Academic Service</h2>
+                <div class="cv-section-content">
+                    <article class="cv-entry">
+                        <h3>Assisted with Peer Review</h3>
+                        <ul>
+                            <li>USENIX Security Symposium</li>
+                            <li>ACM CCS</li>
+                            <li>ESORICS</li>
+                        </ul>
+                    </article>
+                    <article class="cv-entry">
+                        <h3>Session Chair</h3>
+                        <ul>
+                            <li>IEEE ISPA, <time datetime="2024">2024</time></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
             <div class="cv-actions"> 
                 <button class="print-button" type="button">Print / Save as PDF</button>                 
             </div>             
